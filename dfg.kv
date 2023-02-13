@@ -1,0 +1,159 @@
+
+<Container>
+    rows: 4
+    padding: [50, 0, 0, 50]
+
+    ip: ip
+    port: port
+    button1: button1
+    label1: label1
+
+    img1: img1
+    img2: img2
+    img3: img3
+    img4: img4
+    img5: img5
+    img6: img6
+    img7: img7
+    img8: img8
+
+    text1: text1
+    text2: text2
+    text3: text3
+    text4: text4
+    text5: text5
+    text6: text6
+    text7: text7
+    text8: text8
+
+    GridLayout:
+        cols: 2
+
+        BoxLayout:
+            size_hint: 0.3, 1
+            orientation: 'vertical'
+            padding: [0, 20, 0, 20]
+            MDLabel:
+                text: 'IP'
+                font_size: '24sp'
+            MDLabel:
+                text: 'Port'
+                font_size: '24sp'
+
+        BoxLayout:
+            orientation: 'vertical'
+            MDTextField:
+                id: ip
+                text:'82.209.208.36'
+                hint_text: '82.209.208.36'
+                multiline: False
+            MDTextField:
+                id: port
+                text:'4500'
+                hint_text: '4500'
+                multiline: False
+
+
+    GridLayout:
+        rows:2
+        BoxLayout:
+            orientation: 'horizontal'
+            spacing: 0
+            Image:
+                id: img1
+                source: 'disconnect.jpg'
+                size_hint_x: None
+                size_hint_y: None
+                width: 50
+                height: 150
+            MDLabel:
+                id: text1
+                
+
+            Image:
+                id: img2
+                source: 'disconnect.jpg'
+                size_hint_x: None
+                size_hint_y: None
+                width: 50
+                height: 150
+            MDLabel:
+                id: text2
+            
+            Image:
+                id: img3
+                source: 'disconnect.jpg'
+                size_hint_x: None
+                size_hint_y: None
+                width: 50
+                height: 150
+            MDLabel:
+                id: text3
+            
+            Image:
+                id: img4
+                source: 'disconnect.jpg'  
+                size_hint_x: None
+                size_hint_y: None
+                width: 50
+                height: 150  
+            MDLabel:
+                id: text4
+
+        
+        BoxLayout:
+            orientation: 'horizontal'
+            Image:
+                id: img5
+                source: 'disconnect.jpg'
+                size_hint_x: None
+                size_hint_y: None
+                width: 50
+                height: 150
+            MDLabel:
+                id: text5
+                
+
+            Image:
+                id: img6
+                source: 'disconnect.jpg'
+                size_hint_x: None
+                size_hint_y: None
+                width: 50
+                height: 150
+            MDLabel:
+                id: text6
+            
+            Image:
+                id: img7
+                source: 'disconnect.jpg'
+                size_hint_x: None
+                size_hint_y: None
+                width: 50
+                height: 150
+            MDLabel:
+                id: text7
+            
+            Image:
+                id: img8
+                source: 'disconnect.jpg'
+                size_hint_x: None
+                size_hint_y: None
+                width: 50
+                height: 150
+            MDLabel:
+                id: text8
+
+    MDLabel:
+        id: label1
+        size_hint: 1, 1
+        text: ''
+
+    MDRaisedButton:
+        id: button1
+        padding: [20, 20, 20, 20]
+        font_size: '25sp'
+        text: 'Подключиться'
+
+        on_release:
+            root.connect()
